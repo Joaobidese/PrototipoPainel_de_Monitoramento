@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Freezer IoT</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      background-color: #eef2f5; 
+      color: #333; 
+      margin: 0; 
+      padding: 40px; 
+    }
+    .header { text-align: center; margin-bottom: 40px; }
+    h1 { color: #2c3e50; margin-bottom: 5px; }
+    .container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .card { 
+      background: #fff; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+      padding: 25px; 
+      width: 260px; 
+      text-align: center; 
+    }
+    .temp { font-size: 3.5em; font-weight: bold; color: #007bff; margin: 15px 0; }
+    .temp-ext { color: #f39c12; }
+    .alert-card { border-bottom: 5px solid #28a745; }
+    .alert-text { color: #28a745; font-weight: bold; font-size: 1.5em; margin: 25px 0;}
+    .badge { background: #17a2b8; color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8em; }
+    .footer-text { font-size: 0.9em; color: #7f8c8d; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1> Painel de Monitoramento IoT</h1>
+    <p>Protótipo de Interface Web - Servidor ESP32 <span class="badge">SIMULAÇÃO FRONTEND</span></p>
+  </div>
+
+  <div class="container">
+    <!-- Sensor Interno -->
+    <div class="card">
+      <h3>Temperatura Interna</h3>
+      <div class="temp">-18.5 °C</div>
+      <p class="footer-text">Sensor DS18B20 (Dentro do Freezer)</p>
+    </div>
+
+    <!-- Sensor Externo -->
+    <div class="card">
+      <h3>Temperatura Externa</h3>
+      <div class="temp temp-ext">24.2 °C</div>
+      <p class="footer-text">Sensor DS18B20 (Ambiente)</p>
+    </div>
+
+    <!-- Status do Sistema -->
+    <div class="card alert-card">
+      <h3>Status de Alerta</h3>
+      <div class="alert-text">✅ Normal</div>
+      <p class="footer-text">Buzzer Desativado</p>
+    </div>
+  </div>
+
+</body>
+</html>
